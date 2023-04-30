@@ -1,5 +1,4 @@
-export default `
-<div class="wrapper">
+const virtualKeyBoardHTML = `<div class="wrapper">
 <label for="v__keyboard">VIRTUAL KEYBOARD:</label>
 <textarea id="v__keyboard" name="v__keyboard"></textarea>
 <div class="keyboard">
@@ -72,3 +71,5 @@ export default `
 </div>
 </div>
 `
+
+export default virtualKeyBoardHTML;
