@@ -102,3 +102,18 @@ textarea {
 }
 
 
+span::before {
+	content: attr(data-content);
+}
+
+
+.active {
+	background-color: rgb(153, 125, 252);
+	opacity: 0.3;
+}
+
+.caps-lock__active {
+	background-color: rgb(153, 125, 252);
+	opacity: 0.3;
+}
+

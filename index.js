@@ -2,6 +2,7 @@ import virtualKeyBoardHTML from './assets/virtual-keyboard.js'
 import langRu from './assets/langRu.js';
 import langEn from './assets/langEn.js'
 import changeKeyboard from './assets/changeKeyBoard.js'
+import handClick from './assets/handClick.js'
 
 async function startApp(){
 
@@ -14,6 +15,8 @@ async function startApp(){
     let mode = 'normal';
     const row = document.querySelector('.row');
     const keyboard = document.querySelector('.keyboard');
+
+    document.addEventListener('keydown', handClick);
 
     changeKeyboard(mode, layout, row);
     const textarea = document.querySelector('textarea');
