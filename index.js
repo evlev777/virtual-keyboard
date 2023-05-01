@@ -7,7 +7,7 @@ import mouseClickDown from './assets/mouseClickDown.js'
 import mouseClickUp from './assets/mouseClickUp.js'
 import mouseClickKey from './assets/mouseClickKey.js'
 
-async function startApp(){
+/* async function startApp(){
 
     localStorage.setItem('lang', localStorage.getItem('lang') || 'en');
     let layout = localStorage.getItem('lang') === 'en' ? langEn : langRu;
@@ -30,4 +30,16 @@ async function startApp(){
     textarea.focus()
 }
 
-startApp();
+startApp(); */
+
+const virtualKeyboard = document.querySelector('.virtual__keyboard');
+virtualKeyboard.insertAdjacentHTML('afterbegin',virtualKeyBoardHTML);
+
+function currentLang(lang){
+    return lang === "en" ? en : ru;
+}
+
+
+const keyboard = document.querySelector(".keys");
+keyboard.addEventListener("mousedown", mouseClickDown);
+

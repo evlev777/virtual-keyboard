@@ -64,7 +64,6 @@
 	align-items: center;
 	justify-content: center;
   }
-
   .key:active,
   .key.active {
 	color: orangered;
