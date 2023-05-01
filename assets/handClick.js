@@ -1,6 +1,6 @@
 import en from './langEn.js'
 import ru from './langRu.js'
-import changeKeyboard from './changeKeyboard.js'
+import changeKeyboard from './changeKeyBoard.js'
 
 let mode = 'normal';
 
