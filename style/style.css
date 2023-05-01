@@ -1,0 +1,116 @@
+* {
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: "Roboto", sans-serif;
+	margin:0;
+	background: #ececec;
+	display: flex;
+	justify-content: center;
+	padding: 25px;
+	height: 100vh;
+  }
+  .keyboard_wrapper {
+	margin: auto;
+  }
+  .keyboard_wrapper .display {
+	position: relative;
+	height: 200px;
+	width: 100%;
+	padding: 20px;
+	font-family: inherit;
+	font-size: 18px;
+	overflow: hidden;
+	overflow-y: auto;
+	white-space: pre-wrap;
+	border: 2px inset #fff;
+	border-radius: 15px;
+	box-shadow: inset 2px 2px 5px #0002, inset -2px -2px 5px #fff;
+	resize: none;
+  }
+  .keyboard_wrapper .display::before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(45deg, #ffffff00, #0000001a);
+	position: absolute;
+	left: 0;
+	top: 0;
+  }
+  .keyboard_wrapper .keys {
+	margin-top: 20px;
+  }
+  .row {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
+  }
+  
+  .key {
+	display: flex;
+	justify-content: center;
+	transition: 0.3s;
+	border-radius: 7px;
+	box-shadow: 3px 3px 6px #0002, -3px -3px 6px #fff;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+  }
+  .key span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  .key:active,
+  .key.active {
+	color:black;
+	box-shadow: inset 3px 3px 6px #0002, inset -3px -3px 6px #ffffff;
+	background: #dfdfdf;
+  }
+  
+  .row1 > div:last-child,
+  .row2 > div:last-child,
+  .row3 > div:last-child,
+  .row4 > div:last-child,
+  .row5 > div:nth-child(4) {
+	flex: auto;
+  }
+  
+  .esc,
+  .up,
+  .lang,
+  .left,
+  .down,
+  .right {
+	background: #2a0adf;
+	color:white;
+  }
+  .backspace,
+  .tab,
+  .caps-lock,
+  .shift-left,
+  .shift-right,
+  .ctrl-left,
+  .alt-left,
+  .alt-right,
+  .delete {
+	background: #111111;
+	color:white;
+  }
+  .enter,
+  .space {
+	background: #eb2005;
+	color:white;
+  }
+  .tab,
+  .backslash {
+	width: calc(50px * 1.5);
+  }
+  .caps-lock {
+	width: calc(50px * 1.75 + 10px);
+  }
+  .shift-left {
+	width: calc(50px * 2 + 10px);
+  }
