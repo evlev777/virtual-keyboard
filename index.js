@@ -2,7 +2,8 @@ import virtualKeyBoardHTML from './assets/virtual-keyboard.js'
 import langRu from './assets/langRu.js';
 import langEn from './assets/langEn.js'
 import changeKeyboard from './assets/changeKeyBoard.js'
-import handClick from './assets/handClick.js'
+import handClickDown  from './assets/handClick.js'
+import handClickUp  from './assets/handClick.js'
 import mouseClickDown from './assets/mouseClickDown.js'
 import mouseClickUp from './assets/mouseClickUp.js'
 import mouseClickKey from './assets/mouseClickKey.js'
@@ -32,15 +33,26 @@ import mouseClickKey from './assets/mouseClickKey.js'
 
 startApp(); */
 
+let lang = "en";
+let mode = "normal";
+
 const virtualKeyboard = document.querySelector('.virtual__keyboard');
 virtualKeyboard.insertAdjacentHTML('afterbegin',virtualKeyBoardHTML);
 
+const textarea = document.querySelector(".display");
+textarea.focus();
+
 function currentLang(lang){
-    return lang === "en" ? en : ru;
+    return lang === "en" ? langEn : langRu;
 }
 
 
 const keyboard = document.querySelector(".keys");
 keyboard.addEventListener("mousedown", mouseClickDown);
 keyboard.addEventListener("mouseup", mouseClickUp);
+keyboard.addEventListener("click", mouseClickKey);
+document.addEventListener("keydown", handClickDown);
+document.addEventListener("keyup", handClickUp);
+
+
 
