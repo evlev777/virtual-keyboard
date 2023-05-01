@@ -42,4 +42,5 @@ function currentLang(lang){
 
 const keyboard = document.querySelector(".keys");
 keyboard.addEventListener("mousedown", mouseClickDown);
+keyboard.addEventListener("mouseup", mouseClickUp);
 
