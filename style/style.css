@@ -4,17 +4,15 @@
   
   body {
 	font-family: "Roboto", sans-serif;
-	margin: 0;
+	margin:0;
 	background: #ececec;
 	display: flex;
 	justify-content: center;
 	padding: 25px;
+	height: 100vh;
   }
   .keyboard_wrapper {
-	width: 930px;
-	padding: 25px;
-	border-radius: 15px;
-	box-shadow: -4px -4px 8px #fff, 4px 4px 8px #0002;
+	margin: auto;
   }
   .keyboard_wrapper .display {
 	position: relative;
@@ -29,6 +27,7 @@
 	border: 2px inset #fff;
 	border-radius: 15px;
 	box-shadow: inset 2px 2px 5px #0002, inset -2px -2px 5px #fff;
+	resize: none;
   }
   .keyboard_wrapper .display::before {
 	content: "";
@@ -66,7 +65,7 @@
   }
   .key:active,
   .key.active {
-	color: orangered;
+	color:black;
 	box-shadow: inset 3px 3px 6px #0002, inset -3px -3px 6px #ffffff;
 	background: #dfdfdf;
   }
@@ -85,7 +84,8 @@
   .left,
   .down,
   .right {
-	background: #e0e0e0;
+	background: #2a0adf;
+	color:white;
   }
   .backspace,
   .tab,
@@ -96,11 +96,13 @@
   .alt-left,
   .alt-right,
   .delete {
-	background: #d9e0e0;
+	background: #111111;
+	color:white;
   }
   .enter,
   .space {
-	background: #e0e0d5;
+	background: #eb2005;
+	color:white;
   }
   .tab,
   .backslash {
